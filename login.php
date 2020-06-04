@@ -1,7 +1,7 @@
 <?php
         session_start();
 
-        $connect = mysqli_connect('localhost', 'fneves', 'letmein','lagartixa') or die (mysqli_error($connect));
+        $connect = mysqli_connect('localhost', 'fneves', 'xxxxxx','lagartixa') or die (mysqli_error($connect)); 
 
         mysqli_set_charset($connect,'utf8');
         mysqli_select_db($connect,"lagartixa") or die(mysqli_error($connect));
@@ -11,7 +11,7 @@
         mysqli_query($connect,'SET character_set_results=utf8');
 
 
-        //Para ficar com a hora correta (quer seja horário de inverno ou verão).
+        //Para ficar com a hora correta (quer seja horÃ¡rio de inverno ou verÃ£o).
         date_default_timezone_set('Europe/Lisbon');
 
         $username = $_POST['username'];
@@ -30,7 +30,7 @@
                 $_SESSION['id']=$userInfo['id'];
                 $_SESSION['layers']=$userInfo['layers'];
 
-                header("location: http://www.google.com");   //endereço ou pagina que vem depois de um login correto
+                header("location: http://www.google.com");   //endereÃ§o ou pagina que vem depois de um login correto
 
         } else {
                 header("location: index.php?erro=1");    
